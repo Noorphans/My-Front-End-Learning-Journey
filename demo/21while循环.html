@@ -41,27 +41,38 @@
     // 声明偶数和的变量sum
     //利用if语句把 i里面是偶数的筛选出来
     // 每次把i加到sum里
-    let i = 1
-    let sum =0
-    while  (i <= 100) {
-      if (i % 2 === 0) {
-    //  sum = sum + i
-    // sum = 0 + 2    // 此时 i = 2
-    // sum = 0 + 2 + 4  // 此时 i = 4
-    // sum = 0 + 2 + 4 + 6  // 此时 i = 6
-        sum += i
-      }
-      i++
-    }
-    console.log(sum)
+    // let i = 1
+    // let sum =0
+    // while  (i <= 100) {
+    //   if (i % 2 === 0) {
+    // //  sum = sum + i
+    // // sum = 0 + 2    // 此时 i = 2
+    // // sum = 0 + 2 + 4  // 此时 i = 4
+    // // sum = 0 + 2 + 4 + 6  // 此时 i = 6
+    //     sum += i
+    //   }
+    //   i++
+    // }
+    // console.log(sum)
 
-  //   let i = 0
-  //   let sum = 0
-  //   while(i < 101) {
-  //     i % 2 ===0 ? sum += i :sum+=0
-  //     i++
-  //   }
-  // console.log(sum)
+    //   let i = 0
+    //   let sum = 0
+    //   while(i < 101) {
+    //     i % 2 ===0 ? sum += i :sum+=0
+    //     i++
+    //   }
+    // console.log(sum)
+
+  let i = 0
+  let sum =0
+  while  (i < 101) {
+    if (i % 2 === 0) {
+      sum = sum + i
+    }
+    i++
+  }
+  console.log(sum)
+  
   </script>
 </body>
 </html>
