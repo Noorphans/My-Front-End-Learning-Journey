@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 3 > 5 && 2 < 7 && 3 == 4
+    console.log(a) //false
+    let b = 3 <= 4 || 3 > 1 || 3 !=2
+    console.log(b) //true
+    let c = 2 === '2'
+    console.log(c) //false
+    let d = !c || b && a
+    console.log(d) //true
+    //因为c为false，!c 为true，b为true，a为false，先算b && a，一假则假，为false，再算！，非假即真
+  </script>
+</body>
+</html>

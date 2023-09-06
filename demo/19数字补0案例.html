@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 用户输入1个数，如果数字小于10，则前面进行补0，如09 03等
+    // 为后期页面显示时间做铺垫
+    // 利用三元运算符 补0 计算
+
+    // 写法1，num存的为字符串，prompt不写+
+    // let num = prompt('请您输入一个数字：')
+    // num < 10 ? 0 + num : num
+
+    // 写法2，num存的为数字，prompt写+， 0写字符串'0'
+
+    // let age = 18
+    // age = age+1 // 等同于age++
+    let num = +prompt('请您输入一个数字：')
+    // num = num < 10 ? '0' + num : num //判断得到的结果重新赋值给左边num
+    num = num >= 10 ? num : '0' + num
+    alert(num)
+  </script>
+</body>
+</html>

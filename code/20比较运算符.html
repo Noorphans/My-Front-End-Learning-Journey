@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(3 > 5)        //true
+    console.log(3 >= 5)       //false
+    console.log(3 == 3)       //true
+    console.log(2 == '2')     //true
+    console.log(2 === '2')    //false
+    console.log(undefined === null) //false
+    console.log(NaN === NaN) //false
+    console.log(2 !== 2) //true
+    console.log('--------------------')
+    // a的ASCII码是97，b的ASCII码是98
+    console.log('a' < 'b') //true
+    // 第一个相等，再找第二个a与b相比
+    console.log('aa' < 'ab') //true
+    // 第一个第二个相比都相等，第三个只有c，所以aac大
+    console.log('aa' < 'aac') //true
+    console.log('--------------------')
+  </script>
+</body>
+</html>

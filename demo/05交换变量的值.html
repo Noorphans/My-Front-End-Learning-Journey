@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+    有两个变量：num1里放的10，num2里放的20，
+    最后变为num1里为20，num2里为10 
+    */
+    /* 核心思路：使用一个临时变量 做中间存储temp
+    把num1赋值给temp（temp里存的是num1）
+    把num2赋值给num1
+    把temp赋值给num2
+    */
+    // let num1 =10
+    // let num2 =20
+    // let temp 
+    // // 都是把右边给左边
+    // temp = num1
+    // num1 = num2
+    // num2 = temp 
+    // console.log(num1, num2)
+
+    let uname1 = '张三岁'
+    let uname2 = '李四'
+    let uname3
+
+     uname3 = uname1
+     uname1 = uname2
+     uname2 = uname3
+     console.log(uname1, uname2)
+
+
+  </script>
+</body>
+</html>
