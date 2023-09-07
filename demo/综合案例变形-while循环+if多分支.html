@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 根据用户选择计算两个数的结果
+    // 打开页面出现一个提示框,注意是一直提示的,"请您选择+-*/,如果输入q,则退出程序"
+    /* 
+    1.如果输入的是其中的任何一个,比如用户输入是+,则计算求和...
+    2.则提示第一个弹窗,提示:"请输入第一个数字"
+    3.输入完毕继续第二个弹窗
+    4.都输入完毕,则通过警示框输出结果
+    5.如果输入是q,则程序结束
+    */
+  //  while (true) {
+  //   let re = prompt(`
+  //   1.请您选择+-*/计算两个数字结果
+  //   2.如果输入q则是退出
+  //   `)
+  //   if (re === 'q') {
+  //     break
+  //   } else {
+  //     let num = +prompt('请输入第一个数')
+  //     let num1 = +prompt('请输入第二个数')
+  //     if (re === '+') {
+  //       alert(`两数之和为${num + num1}`)
+  //     } 
+  //     if (re === '-') {
+  //     alert(`两数之差为${num - num1}`)
+  //     }
+  //     if (re === '*') {
+  //     alert(`两数之积为${num * num1}`)
+  //     }
+  //     if (re === '/') {
+  //     alert(`两数之商为${num / num1}`)
+  //     }
+  //   }
+     
+  // }  
+
+  // 写法2:
+  while (true) {
+    let re = prompt(`
+    1.请您选择+-*/计算两个数字结果
+    2.如果输入q则是退出
+    `)
+    if (re === 'q') {
+      break
+    } else if (re === '+') {
+      let num = +prompt('请输入第一个数')
+      let num1 = +prompt('请输入第二个数')
+      alert(`两数之和为${num + num1}`)
+    } else if (re === '-') {
+      let num = +prompt('请输入第一个数')
+      let num1 = +prompt('请输入第二个数')
+      alert(`两数之差为${num - num1}`)
+    } else if (re === '*') {
+      let num = +prompt('请输入第一个数')
+      let num1 = +prompt('请输入第二个数')
+      alert(`两数之积为${num * num1}`)
+    } else if (re === '/') {
+      let num = +prompt('请输入第一个数')
+      let num1 = +prompt('请输入第二个数')
+      alert(`两数之商为${num / num1}`)
+    } 
+     
+  }
+
+  </script>
+</body>
+</html>l

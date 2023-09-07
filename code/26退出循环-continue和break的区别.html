@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 打印5句话
+    // let i = 1
+    // while (i <= 5) {
+    //   console.log(`这是第${i}次循环`)
+    //   i++
+    // }
+    console.log('-----------')
+    
+    // 当我循环到第三次时，退出循环
+    // let i = 1
+    // while (i <= 5) {
+    //   if (i === 3) {
+    //     break  // 退出整个循环
+    //   }
+    //   console.log(`这是第${i}次循环`)
+    //   i++
+    // }
+    console.log('-----------')
+    let i = 1
+    while (i <= 5) {
+      if (i === 3) {
+        i++
+        continue  // 结束当前循环，如在第3次循环时会跑到上一步进行判断，当我这个循环结束完后，不再执行下一行代码，3一直<=5，一直死循环，所以要把i++放上面
+      }
+      console.log(`这是第${i}次循环`)
+    }
+
+  </script>
+</body>
+</html>

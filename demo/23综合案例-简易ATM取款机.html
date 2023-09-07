@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 用户可以选择存钱、取钱、查看余额和退出功能
+    /* 
+    1.循环时，需反复提示输入框，所以提示框写到循环里
+    2.退出的条件是用户输入了4，如果是4，则循环结束，不再弹窗
+    3.提前准备一个金额预先存储一个数额
+    4.取钱则是减法操作，存钱加法，查看余额则是直接显示金额
+    5.输入不同的值，可使用switch来执行不同的操作
+    */
+  //  开始循环 
+  // while (true) {
+  //   let re = +prompt(`
+  //   请选择您的操作：
+  //   1.存钱
+  //   2.取钱
+  //   3.查看余额
+  //   4.退出
+  //   `)
+  //   if (re === 4) {
+  //     break
+  //   }
+  // }
+  
+
+  // 3.提前准备一个金额存数额
+  let money = 100
+  // 1.开始循环
+  while (true) {
+    let result = +prompt(`
+    请选择您的操作：
+    1.存钱
+    2.取钱
+    3.查看余额
+    4.退出
+    `)
+    
+    // 2.用户输入条件为4，退出整个循环
+    if (result === 4) {
+      break
+    }
+    // 4.根据输入做操作 
+    switch (result) {
+      case 1 :
+        // 存钱
+        let cun = +prompt('请输入存入金额：')
+        money = money + cun
+        break
+        // 取钱
+      case 2 :  
+        let qu = +prompt('请输入取走的金额：')
+        money = money - qu  //  money -= qu    
+        break
+      case 3 :  
+        // 查询余额
+        alert(`您的查询余额为：${money}`)
+        break
+    }
+
+  }
+  </script>
+</body>
+</html>
