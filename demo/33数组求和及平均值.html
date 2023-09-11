@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 求数组[2,6,1,7,2]里面所有元素的和以及平均值
+      /* 
+    1.声明求和变量sum
+    2.遍历这个数组，把里面的每个元素加到sum里
+    3.平均值则是用求和变量sum除以数组的长度
+    */
+      let arr = [2, 6, 1, 7, 4]
+      let sum = 0
+      for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+      }
+      console.log(`数组之和的结果是：${sum}`)
+      console.log(`数组平均值是：${sum / arr.length}`)
+    </script>
+  </body>
+</html>

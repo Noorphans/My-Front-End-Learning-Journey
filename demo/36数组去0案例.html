@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 将数组[2,0,6,1,77,0,52,0,25,7]中的0去掉后，形成一个不包含0的新数组
+    // 0去掉，则需要找出数组元素不等于0的
+    let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== 0) {
+        // 满足条件追加给新数组
+        newArr.push(arr[i])
+      } 
+    }
+    console.log(newArr)
+  </script>
+</body>
+</html>
