@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        display: inline-block;
+        width: 100px;
+        padding: 5px 10px;
+        border: 1px solid rgb(106, 127, 127);
+        margin: 2px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgb(166, 224, 224);
+        background-color: rgb(234, 251, 255);
+        text-align: center;
+        color: rgb(72, 179, 179);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // for (let i = 1; i <= 9; i++) {
+      //   for (let j = 1; j <= i; j++) {
+      //     document.write(`<span>${j} x ${i} = ${i * j}</span>`)
+      //   }
+      //   // 换行显示
+      //   document.write('<br>')
+      // }
+      // for (let i = 1; i <= 9; i++) {
+      //   for (let j = 1; j <= i; j++) {
+      //     document.write(`<span>${j} x ${i} = ${i * j}</span>`)
+      //   }
+      //   // 换行显示
+      //   document.write('<br>')
+      // }
+      // for (let i = 1; i <= 9; i++) {
+      //   for (let j = 1; j <= i; j++) {
+      //     document.write(`<span>${j} x ${i} = ${i * j}</span>`)
+      //   }
+      //   // 换行显示
+      //   document.write('<br>')
+      // }
+
+      // 1.函数声明
+      // 2.把js公共部分抽取出来封装到一个地方 谁用谁调用
+      function sheet99() {
+        for (let i = 1; i <= 9; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write(`<span>${j} x ${i} = ${i * j}</span>`)
+          }
+          // 换行显示
+          document.write('<br>')
+        }
+      }
+      // 调用一次执行一次
+      sheet99() //调用1次
+      sheet99() //调用2次
+    </script>
+  </body>
+</html>

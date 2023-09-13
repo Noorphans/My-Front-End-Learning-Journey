@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.让用户输入五个有效年龄(0-100之间)，放入数组 （必须是5个有效年龄，若无效年龄，则不能放入数组中）
+      // 2.打印所有成年人年龄（数组筛选）
+      // 3.打印所有人总年龄（累加）
+      // 4.打印所有人平均年龄（累加）
+      // 5.打印最大和最小年龄（最大值）
+
+      // 1.while循环
+      // let arr = []
+      // while (arr.length < 5) {
+      //   let num = +prompt(`请输入第${arr.length + 1}个人的年龄`)
+      //   if (num > 0 && num < 100) {
+      //     arr.push(num)
+      //   }
+      // }
+      // // console.log(arr)
+      // for (let i = 0; i < arr.length; i++) {
+      //   arr[i] >= 18 ? document.write(`${arr[i]}岁成年啦 <br>`) : 18
+      // }
+
+      // let sum = 0
+      // for (let j = 0; j < arr.length; j++) {
+      //   sum = sum + arr[j]
+      // }
+      // document.write(`总年龄为${sum} <br>`)
+
+      // let avg = 0
+      // avg = sum / arr.length
+      // document.write(`平均年龄为${sum / arr.length} <br>`)
+
+      // // let max = arr[0]
+      // // let min = arr[0]
+      // for (let i = 0; i < arr.length; i++) {
+      //   max < arr[i] ? (max = arr[i]) : document.write(`最大值为${max} <br>`)
+      //   min > arr[i] ? (min = arr[i]) : document.write(`最小值为${min} <br>`)
+      // }
+
+      // 2.for循环
+      // let arr = []
+      // for (let i = 0; i < 5; i++) {
+      //   let num = +prompt(`请输入第${arr.length + 1}个人的年龄`)
+      //   if (num > 0 && num < 100) {
+      //     arr.push(num)
+      //   }
+      // }
+      // for (let j = 0; j < arr.length; j++) {
+      //   if (arr[j] >= 18) {
+      //     document.write(`${arr[j]}岁为成年人年龄 <br>`)
+      //   }
+      // }
+      // let sum = 0
+      // for (let k = 0; k < arr.length; k++) {
+      //   sum += arr[k]
+      // }
+      // document.write(`总年龄为${sum} <br>`)
+      // document.write(`平均年龄为${sum / arr.length} <br>`)
+
+      // let max = arr[0]
+      // let min = arr[0]
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (max < arr[i]) {
+      //     max = arr[i]
+      //   }
+
+      //   if (min > arr[i]) {
+      //     min = arr[i]
+      //   }
+      // }
+      // document.write(`最大值为${max} <br>`)
+      // document.write(`最小值为${min} <br>`)
+
+      // 2.找出数组中 元素为10的下标，有则打印该下标，无则打印-1
+      // 如[88,20,10，100,50] 打印2
+      // 如[88,20,30，100,50] 打印-1
+      // let arr = [88, 20, 10, 100, 50]
+      // let result = -1
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] === 10) {
+      //     result = i
+      //     break
+      //   }
+      // }
+      // console.log(result)
+
+      // 3.for循环求出数组元素的和[5,8,9,1,2,5]
+      // let arr = [5, 8, 9, 1, 2, 5]
+      // let sum = 0
+      // for (let i = 0; i < arr.length; i++) {
+      //   sum += arr[i]
+      // }
+      // console.log(sum) //30
+
+      // 4.for循环求出数组里大于5的i和[4,9,5,20,3,11]
+      // let sum = 0
+      // let arr = [4, 9, 5, 20, 3, 11]
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] > 5) {
+      //     sum = sum + arr[i] // 0+9+20+11
+      //   }
+      // }
+      // console.log(sum)
+
+      // 5.for循环求出班级同学平均年龄[15,19,21,33,18,24]
+      // let arr = [15, 19, 21, 33, 18, 24]
+      // let sum = 0
+      // let avg = 0
+      // for (let i = 0; i < arr.length; i++) {
+      //   sum += arr[i]
+      //   avg = sum / arr.length
+      // }
+      // console.log(avg)
+
+      // 6.计算[2,6,18,15,40]中能被3整除的偶数的和
+      // let sum = 0
+      // let arr = [2, 6, 18, 15, 40]
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] % 3 === 0 && arr[i] % 2 === 0) {
+      //     sum += arr[i]
+      //   }
+      // }
+      // console.log(sum) //24
+
+      // 7.计算[2,6,18,15,40]中能被3整除的偶数个数
+      // let arr = [2, 6, 18, 15, 40]
+      // let num = 0
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] % 3 === 0 && arr[i] % 2 === 0) {
+      //     num++
+      //   }
+      // }
+      // console.log(`能被3整除的偶数个数是${num}`)
+
+      // 8.给一个数字数组，该数组中有很多0，将不为0的数据存到一个新数组中
+      let newArr = []
+      let arr = [0, 1, 3, 0, 4, 0, 5, 0, 9]
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+          newArr.push(arr[i])
+        }
+      }
+      document.write(newArr)
+    </script>
+  </body>
+</html>

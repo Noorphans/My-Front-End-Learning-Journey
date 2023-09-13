@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let age = 18
+      // age = 29
+      // console.log(age)
+      for (let i = 0; i <= 3; i++) {
+        for (let j = 1; j <= 3; j++) {
+          console.log('hello')
+        }
+      }
+      /* 
+      i = 0,i<=3满足条件，i++ = 1,进入内层for循环；j = 1,j<=3满足条件，j++ = 2,打印hello 
+                                       j = 2,j<=3满足条件，j++ = 3,打印hello
+                                       j = 3,j<=3满足条件，j++ = 4,打印hello
+                                       j = 4,j<=3不满足条件，跳出内层for循环，进入外层for循环
+      i = 1,i<=3满足条件，i++ = 2,进入内层for循环；j = 1,j<=3满足条件，j++ = 2,打印hello 
+                                       j = 2,j<=3满足条件，j++ = 3,打印hello
+                                       j = 3,j<=3满足条件，j++ = 4,打印hello
+                                       j = 4,j<=3不满足条件，跳出内层for循环，进入外层for循环
+      i = 2,i<=3满足条件，i++= 3，进入内层for循环;j = 1,j<=3满足条件，j++ = 2,打印hello 
+                                       j = 2,j<=3满足条件，j++ = 3,打印hello
+                                       j = 3,j<=3满足条件，j++ = 4,打印hello
+                                       j = 4,j<=3不满足条件，跳出内层for循环，进入外层for循环
+      i = 3,i<=3满足条件,i++ = 4,进入内层for循环；j = 1,j<=3满足条件，j++ = 2,打印hello 
+                                       j = 2,j<=3满足条件，j++ = 3,打印hello
+                                       j = 3,j<=3满足条件，j++ = 4,打印hello
+                                       j = 4,j<=3不满足条件，跳出内层for循环，进入外层for循环
+      i = 4,i<=3不满足条件，退出外层循环，结束！ 
+
+      外层执行1次，内层执行3次
+      问：外层执行4次，总共执行多少次？ 3+3+3+3 = 3*4 = 12
+      
+      
+      
+      */
+    </script>
+  </body>
+</html>

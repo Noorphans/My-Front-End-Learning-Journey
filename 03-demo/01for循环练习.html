@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-       // 利用for循环输出三句话 月薪过万
+      // 利用for循环输出三句话 月薪过万
       // for (let i = 1; i <= 3; i++) {
       //   document.write("月薪过万 <br>");
       // }
@@ -15,17 +15,17 @@
       // for (let i = 1; i <= 10; i++) {
       //   document.write("学新不过百 <br>");
       // }
-      
+
       // 1.循环输出1-100岁
       // for (let i = 1; i <= 100; i++) {
-      //   document.write(`${i}岁 <br>`);
+      //   document.write(`${i}岁 <br>`)
       // }
 
       // 2.求1-100之间所有的偶数和
       // let sum = 0
       // for (let i = 1; i <= 100; i++) {
       //   if (i % 2 === 0) {
-      //     sum += i
+      //     sum += i //把i加到sum里面去
       //   }
       // }
       // document.write(sum)
@@ -33,6 +33,17 @@
       // for (let i = 1; i <= 5; i++) {
       //   document.write('⭐')
       // }
+
+      // 4.打印数组
+      let arr = ['周杰伦', '薛之谦', '刘德华', '刘若英', '刘晓庆', '刘晓强']
+      console.log(arr[0])
+      console.log(arr[1])
+      console.log(arr[2])
+      console.log(arr[3])
+      // i <= 4 ，长度 - 1
+      for (let i = 0; i <= arr.length - 1; i++) {
+        console.log(arr[i])
+      }
     </script>
   </body>
 </html>

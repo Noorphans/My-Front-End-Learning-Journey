@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.封装一个函数，计算两个数的和
+      // function getSum() {
+      //   let num = +prompt('请输入第一个数：')
+      //   let num1 = +prompt('请输入第二个数：')
+      //   console.log(`两数之和为${num + num1}`)
+      // }
+      // getSum()
+
+      // 2.封装一个函数，计算1-100之间所有数的和
+      function getSum() {
+        let sum = 0
+        for (let i = 1; i < 101; i++) {
+          sum += i
+        }
+        console.log(`1-100之间所有数的和为${sum}`)
+      }
+      getSum()
+    </script>
+  </body>
+</html>

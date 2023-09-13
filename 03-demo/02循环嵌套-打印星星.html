@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 页面中打印出5行5列星星
+      // for (let i = 1; i <= 5; i++) {
+      //   for (let j = 1; j <= 5; j++) {
+      //     document.write('✧')
+      //   }
+      //   // 换行显示
+      //    document.write('<br>')
+      // }
+
+      // let row = +prompt('请输入行数：')
+      // let col = +prompt('请输入列数：')
+      // for (let i = 1; i <= row; i++) {
+      //   for (let j = 1; j <= col; j++) {
+      //     document.write('✧')
+      //   }
+      //   // 换行显示
+      //    document.write('<br>')
+      // }
+
+      // 打印倒三角星星
+      /* 
+    1.外层打印行数，内层每行打印几个（列）
+    2.内层的个数跟第几行一一对应
+    */
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write('✧')
+        }
+        // 换行显示
+        document.write('<br>')
+      }
+    </script>
+  </body>
+</html>

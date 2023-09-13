@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 求1-50，1-100累加和
+      // function getSum(end) {
+      //   // end = 50
+      //   // console.log(end)
+      //   let sum = 0
+      //   for (let i = 1; i <= end; i++) {
+      //     sum += i
+      //   }
+      //   console.log(`1-50之间所有数的和为${sum}`)
+      // }
+      // getSum(50) // 1-50累加和
+      // getSum(100) // 1-100累加和
+
+      // 求 1-200累加和
+      function getSum(start, end) {
+        // 形参 形式上的参数
+        let sum = 0
+        for (let i = start; i <= end; i++) {
+          sum += i
+        }
+        console.log(`1-50之间所有数的和为${sum}`)
+      }
+      getSum(1, 200) // 调用的小括号里面 实参-实际参数
+      getSum(100, 101) // 201
+    </script>
+  </body>
+</html>

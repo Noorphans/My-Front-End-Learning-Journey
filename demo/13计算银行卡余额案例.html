@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+
+      table {
+        width: 700px;
+        height: 90px;
+        margin: 0 auto;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>2023年9月消费支出</h2>
+    <script>
+      /*
+       1、用户输入总的银行卡金额，依次输入本月花费的电费，水费，网费。
+       2、页面打印一个表格，计算出本月银行卡还剩下的余额。
+      */
+
+      /*
+       1.我们需要5个变量：银行卡总额、水费、电费、网费、银行卡余额
+       2.银行卡余额= 银行卡总额 – 水费 –电费  - 网费
+       3.第一步准备5个变量接受输入的数据
+       4.第二步计算银行卡余额
+       5.第三步页面打印生成表格，里面填充数据即可。
+       6.当然可以提前把html页面搭好。
+       */
+
+      // 1. 声明5个变量
+      const total = prompt('请输入银行卡总额:')
+      const waterMoney = prompt('请输入水费:')
+      const dianMoney = prompt('请输入电费:')
+      const netMoney = prompt('请输入网费:')
+      const money = total - waterMoney - dianMoney - netMoney
+      // console.log(money)
+      document.write(`<table>
+         <tr>
+             <th>银行卡余额</th>
+             <th>水费</th>
+             <th>电费</th>
+             <th>网费</th>
+             <th>银行卡余额</th>
+         </tr>
+         <tr>
+             <td>${total}元</td>
+             <td>${waterMoney}元</td>
+             <td>${dianMoney}元</td>
+             <td>${netMoney}元</td>
+             <td>${money}元</td>
+         </tr>
+        </table>`)
+    </script>
+  </body>
+</html>
