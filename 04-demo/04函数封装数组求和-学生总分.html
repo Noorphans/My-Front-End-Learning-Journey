@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 学生分数是一个数组，计算每个学生的总分
+      // 1.封装一个求和函数
+      // 2.传递过去的参数是一个数组
+      // 3.函数内部遍历数组求和
+      function getArrSum(arr = []) {
+        //给一个空数组 默认值为0
+        // console.log(arr)
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+          //没有赋值，arr默认为undefined，但undefined没有长度，只有数组有长度，所以
+          sum += arr[i]
+        }
+        console.log(sum)
+      }
+      getArrSum([1, 2, 3, 4, 5])
+      getArrSum([11, 22, 23, 54, 55])
+      getArrSum() // 数组未赋值，报错，要给形参默认值，让程序不显示bug
+    </script>
+  </body>
+</html>

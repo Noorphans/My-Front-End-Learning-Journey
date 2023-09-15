@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function getSum(x, y) {
+      //   return x + y //返回给调用者
+      // }
+      // let res = getSum(1, 2) //函数调用者
+      // console.log(res)
+
+      // 两个相同函数，后面的会覆盖前面的函数
+      // function fn() {
+      //   console.log(1)
+      // }
+      // function fn() {
+      //   console.log(2)
+      // }
+      // fn()
+
+      // 参数不匹配 不一致
+      function fn(a, b) {
+        console.log(a + b)
+      }
+      // 1.实参多余形参
+      // fn(1, 2, 3)
+      // 1,2传给a,b 3没变量接,不参与计算
+
+      // 2.形参多余实参
+      fn(1)
+      // 1传递给a， b拿不到值，声明变量未赋值就是undefined，数字+undefined结果NaN
+    </script>
+  </body>
+</html>

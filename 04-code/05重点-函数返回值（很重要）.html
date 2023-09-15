@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数返回值
+      function an() {
+        return 20 // 把20给an()
+      }
+      // console.log(an())
+      // an()是调用者,相当于执行了 an()  = 20
+
+      // 开发中常用写法
+      // let num = prompt('请输入数字')
+      //把20 给an()；相当于an() 为 20
+      let res = an()
+      console.log(res)
+
+      // function prompt(str) {
+      //   return str
+      // }
+      // let num1 = prompt('请输入')
+      // console.log(num1)
+
+      // function getSum(x, y) {
+      //   return x + y
+      // }
+
+      // let sum = getSum(10, 20)
+      // document.write(sum)
+
+      // 求和函数的写法
+      function getTotalPrice(x, y) {
+        return x + y
+        // return 后面代码不会再被执行,且数据不能换行
+      }
+      // 打印太长 不方便
+      // console.log(getTotalPrice(1, 2))
+      let sum = getTotalPrice(1, 2)
+      console.log(sum)
+
+      // function fn() {
+
+      // return函数 可以没有return，函数默认返回值undefined
+
+      // }
+      // let res = fn()
+      // console.log(res) //undefined
+    </script>
+  </body>
+</html>

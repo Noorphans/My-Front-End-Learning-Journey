@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let num = 20
+      // function fn() {
+      //   num = 10 //全局变量来看(强烈不推荐)
+      // }
+      // fn()
+      // console.log(num) // 10
+      // //内部变量未声明，当全局变量看，本来要20，结果给的10
+
+      // function fun(x, y) {
+      //   // 形参看做局部变量
+      //   console.log(x)
+      // }
+      // fun(1, 2)
+      // console.log(x) // 报错
+      // x,y是形参看做局部变量，不能外面打印
+
+      // 函数套函数
+      let num = 10 // 全局
+      function fn() {
+        let num = 20 // 局部
+        function fun() {
+          let num = 30 // 局部
+          console.log(num) // 30
+        }
+        fun()
+      }
+      fn()
+    </script>
+  </body>
+</html>
