@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ;(function flexible(window, document) {
+        // window.devicePixelRatio 获取当前设备的 dpr
+        // 获取不到，则默认取值为1
+        // 移动端 获取为2，则执行2
+        let dpr = window.devicePixelRatio || 1
+      })(window, document)
+    </script>
+  </body>
+</html>

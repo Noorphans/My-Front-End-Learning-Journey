@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 用户输入秒数，可以自动转换为时分秒
+      /* 
+      1.用户输入总秒数（注意默认值）
+      2.计算时分秒（封装函数）里面包含数字补0 
+      3.打印输出
+      */
+
+      // 1.用户输入
+      let seconds = +prompt('请输入总秒数：')
+      // 2.封装函数
+      function getTime(t) {
+        // 3.计算时间
+        h = parseInt((t / 60 / 60) % 24)
+        m = parseInt((t / 60) % 60)
+        s = parseInt(t % 60)
+        // 4.时间换算
+        let h = h < 10 ? '0' + h : h
+        let m = m < 10 ? '0' + m : m
+        let s = s < 10 ? '0' + s : s
+        h = h < 10 ? '0' + h : h
+        m = m < 10 ? '0' + m : m
+        s = s < 10 ? '0' + s : s
+        return `转换后时间为${h}时${m}分${s}秒`
+      }
+      let str = getTime(seconds)
+      console.log(str)
+
+      // 函数内部未声明直接赋值，当全局变量看，外部可以调用，有风险
+      // let second = +prompt('请输入总秒数')
+      // function getTime(t) {
+      //   // console.log(t) // t为总秒数
+      //   // 转换时间
+      //   // 小时：  h = parseInt(总秒数 / 60 / 60 % 24)
+      //   // 分钟：  m = parseInt(总秒数 / 60 % 60)
+      //   // 秒数: s = parseInt(总秒数 % 60)
+      //   h = parseInt((t / 60 / 60) % 24)
+      //   m = parseInt((t / 60) % 60)
+      //   s = parseInt(t % 60)
+      //   h = h < 10 ? '0' + h : h
+      //   m = m < 10 ? '0' + m : m
+      //   s = s < 10 ? '0' + s : s
+      //   // console.log(h, m, s)
+      //   return `转换完毕后是${h}时${m}分${s}秒`
+      // }
+      // let str = getTime(second)
+      // console.log(str)
+    </script>
+  </body>
+</html>

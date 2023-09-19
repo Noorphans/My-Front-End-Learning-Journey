@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 请看以下代码，并说出执行的流程~~~
+      function printfInput(content) {
+        // 将用户输入的内容, 在页面中显示
+        document.write(content)
+      }
+      let constr = prompt('请输入内容')
+      printfInput(constr)
+
+      /* 
+      1.声明函数printfInput，并接受一个参数
+      2.用户先输入内容，并把内容存储在一个变量constr中
+      3.prompt会等待用户输入，将用户输入的内容以字符串型返回
+      4.调用者printfInput()将得到的内容作为参数传递过去
+      5.函数内部执行document.write将传递给函数的内容显示在网页上
+      
+      也就是，获取用户输入，然后通过调用printfInput函数将用户输入的内容显示在网页上
+      */
+    </script>
+  </body>
+</html>

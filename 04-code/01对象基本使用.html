@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 语法：let 对象名 = {}
+      // 1.声明对象
+      let teacher = {
+        uname: '张老师',
+        age: 20,
+        gender: '女'
+      }
+
+      // 查询  对象名.属性
+      console.log(teacher.age) // 20
+
+      // 修改 对象名.属性 = 新值
+      teacher.gender = '男'
+      console.log(teacher)
+
+      // 新增 对象名.属性 = 新值
+      teacher.height = 170
+      console.log(teacher)
+
+      // 删除 delete 对象名.属性
+      delete teacher.height
+      console.log(teacher)
+      // console.log(teacher)
+      // console.log(typeof teacher)
+    </script>
+  </body>
+</html>

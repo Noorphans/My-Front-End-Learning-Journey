@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       商品对象名字 goods
+       商品名称命为 name
+       商品编号 num
+       商品重量 weight
+       商品产地 address
+       */
+      // 1.声明对象
+      let goods = {
+        name: '小米10 青春版',
+        num: '100012816024',
+        weight: '0.55kg',
+        address: '上海'
+      }
+      // goods.price = '3999元'
+      // goods.sing = function () {
+      //   console.log(hi)
+      // }
+      // console.log(goods)
+      // 查询 对象名.属性
+      // goods.name
+
+      // 修改 对象名.属性名 = 新值
+      console.log((goods.name = '小米10PLUS'))
+      console.log(goods.num)
+      console.log(goods.weight)
+      console.log(goods.address)
+      // 新增
+      console.log((goods.color = '粉色'))
+      // console.log(typeof goods)
+    </script>
+  </body>
+</html>

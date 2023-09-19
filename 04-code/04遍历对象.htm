@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // for in 不推荐遍历数组,因为索引号是字符串型
+      // let arr = ['pink', 'red', 'blue']
+      // for (let k in arr) {
+      //   console.log(k) // k为数组的下标 索引号  但是字符串 '0'，打印输出颜色黑色就是字符串
+      //   console.log(arr[k]) // arr[k]
+      // }
+
+      // 1. 遍历对象 for in
+      let obj = {
+        uname: '张老师',
+        age: 18,
+        gender: '男'
+      }
+      // 2. 遍历对象
+      for (let k in obj) {
+        // console.log(k) // 属性名带引号的字符串型  'uname'   'age' 'gender'
+        // console.log(obj.uname)
+        // 以前的写法uname就是k，k里存的就是这些属性，所以obj.k
+        // console.log(obj.k)
+        //但这样遍历得到三个undefined，没有k这个属性，所以找不到，主要是因为k里面存的是字符串属性，这样写相当于打印了obj.'uname'
+        // console.log(obj.'uname')
+        // 查的另一种写法
+        // console.log(obj['uname'])
+        //  'uname'  === k
+        console.log(obj[k]) // 输出属性值  obj[k]
+      }
+    </script>
+  </body>
+</html>

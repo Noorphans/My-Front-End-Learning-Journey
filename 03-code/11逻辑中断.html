@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getSum(x, y) {
+        x = x || 0
+        y = y || 0
+        //  x,y未赋值为undefined，当假看，遇到||两边同为假 取后面值
+        console.log(x + y)
+      }
+      getSum(1, 2)
+
+      //若调用不传参，x,y为undefined得到结果为NaN，所以形参得用默认值
+      // function getSum(x = 0, y = 0) {
+      //   console.log(x + y)
+      // }
+      // getSum()
+
+      // let age = 18
+      // // console.log(false && 22) //false
+      // console.log(false && 3 + 5)
+      // console.log(11 || age++) // 11
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(Boolean('blue')) //true
+      console.log(Boolean('')) //false
+      console.log(Boolean(0)) //false
+      console.log(Boolean(-1)) //true
+      console.log(Boolean(undefined)) //false
+      console.log(Boolean(null)) //false
+      console.log(Boolean(NaN)) //false
+      console.log(Boolean(false)) //false
+      console.log(undefined && 20) //undefined
+      console.log(null && 20) // null
+
+      null == undefined // true
+      // null和undefined当0看
+
+      null === undefined // false
+      // 数据类型不一样，值一样都为0
+
+      console.log('' - 1) // -1
+      //  空字符串当0看
+
+      console.log('....................')
+    </script>
+  </body>
+</html>

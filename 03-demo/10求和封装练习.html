@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 一.封装函数 名字为sum，根据传入的两个数字，求和并且返回求和结果（函数必须有return）
+      // function sum(x, y) {
+      //   let result = x + y
+      //   return result
+      //   // return x + y
+      // }
+      // let res = sum(1, 2)
+      // document.write(`两数之和为${res}`)
+
+      // 二.实现两个数的值交换(函数版本)
+      /*
+       1. 函数名为 changeNum()
+       2. 调用函数时,  `changeNum(1，2)`
+       3. 经过函数内部处理后,输出  `第一个值的结果是2  第二个值的结果是1`
+       4. 可以多调用两次
+       */
+      // function changeNum(x, y) {
+      //   let temp = x
+      //   x = y
+      //   y = temp
+      //   document.write(`第一个值的结果是${x} <br>第二个值的结果是${y}`)
+      // }
+      // changeNum(1, 2)
+
+      // 三.封装余额函数
+      /*
+       1. 运行程序后, 浏览器显示输入确认框(prompt)
+       2. 第一个输入确认框提示输入银行卡余额
+       3. 第二个输入确认框提示输入当月食宿消费金额
+       4. 第三个输入确认框提示输入当月生活消费金额
+       5. 输入完毕后,在页面中显示银行卡剩余金额
+       6. 提示: 所有功能代码封装在函数内部（函数需要把余额返回）
+       */
+      // function bal() {
+      //   let num = prompt('银行卡金额')
+      //   let num1 = prompt('当月食宿消费金额')
+      //   let num2 = prompt('当月生活消费金额')
+      //   let num3 = num - num1 - num2
+      //   return num3
+      // }
+
+      // let money = bal()
+      // document.write(`我的银行卡余额还有${money}元`)
+
+      //  四.封装一个函数,可以求任意数组的和 或 平均值
+      /*
+       1.函数可以传递2个参数，比如 handleData(arr, true)  `handleData 处理数据的意思`
+       2.参数一： 接受实参传递过来的数组
+       3.参数二: 布尔类型  如果是true或者不传递参数 是求和操作,如果传递过来的参数是 false 则是求平均值
+       */
+      // function handleData(arr, shouldSum = true) {
+      //   let sum = 0
+      //   for (let i = 0; i < arr.length; i++) {
+      //     sum += arr[i]
+      //   }
+      //   if (shouldSum) {
+      //     return sum
+      //   } else {
+      //     let avg = 0
+      //     avg = sum / arr.length
+      //     return avg
+      //   }
+      // }
+      // // console.log(handleData([1, 2, 3])) // 6
+      // console.log(handleData([1, 2, 3], false)) // 2
+      // console.log(handleData([1, 2, 3], true)) // 6
+
+      // 五.封装 some 函数查看数组是否存在某个元素
+      /*
+      1.要传递2个参数 元素、数组
+      2.如果数组存在元素则返回true，如果没有存在元素就返回 false
+      3.例如检测 香蕉  是否存在于  数组['苹果', '香蕉', '橘子', '荔枝', '梨子']中， 返回结果是 true
+      */
+      // function som(ele, arr = []) {
+      // let flag = false
+      // for (let i = 0; i < arr.length; i++) {
+      //   // ele === arr[i] ? (flag = true) : false
+      //   if (ele === arr[i]) {
+      //     flag = true
+      //     break
+      //   }
+      // }
+      //   return flag
+      // }
+      // let res = som('香蕉', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+      // console.log(res) // true
+      // let rel = som('辣椒', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+      // console.log(rel) // false
+
+      // 六. 封装 findIndex 函数返回查找元素在数组中的索引号。
+      /* 
+      1.要传递2个参数 元素、数组
+      2.如果找到，则返回查找元素在数组中的索引号，如果查找不到，则返回 -1
+      3.例如检测 香蕉 数组['苹果', '香蕉', '橘子', '荔枝', '梨子']中， 返回结果是  1
+      */
+
+      function findIndex(ele, arr = []) {
+        let index = -1
+        for (i = 0; i < arr.length; i++) {
+          if (ele === arr[i]) {
+            index = i
+            break
+          }
+        }
+        return index
+      }
+      let index = findIndex('香蕉', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+      console.log(index) // 1
+      let index1 = findIndex(10, [1, 5, 10, 22, 8, 7])
+      console.log(index1) // 2
+      let index3 = findIndex(88, [1, 5, 10, 22, 8, 7])
+      console.log(index3) // -1
+    </script>
+  </body>
+</html>
