@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 该函数接受一个布尔类型参数，表示颜色的格式是十六进制还是rgb格式
+      /*
+      1.如果参数传递的是true或者无参数，则输出一个随机十六进制的颜色
+      2.如传递的是false，则输出一个随机rgb颜色
+      3.格式：
+        function getRandomColor(flag = true) {
+
+        }
+      console.log(getRandomColor(false))  // rgb(255, 255, 255)
+      console.log(getRandomColor(true)) // #ffffff
+
+      提示:
+      f可以是0-f之间任意字符，需用到数组
+      255 是0-255之间的数
+      */
+      function getRandomColor(flag = true) {
+        if (flag) {
+          let str = '#'
+          let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+          for (let i = 0; i < 6; i++) {
+            let random = Math.floor(Math.random() * arr.length)
+            str = str + arr[random]
+          }
+          return str
+        } else {
+          let r = Math.floor(Math.random() * 256)
+          let g = Math.floor(Math.random() * 256)
+          let b = Math.floor(Math.random() * 256)
+          return `rgb(${r},${g},${b})`
+        }
+      }
+      // let res = getRandomColor(true)
+      // console.log(res)
+      console.log(getRandomColor(true))
+      console.log(getRandomColor())
+      console.log(getRandomColor(false))
+
+      /*       // 1.自定义随机颜色函 flag标识
+      function getRandomColor(flag = true) {
+        if (flag) {
+          // 3.true或者无参数，则返回#ffffff
+          let str = '#'
+          let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+          // 利用for循环随机抽6次 累加到 str里面
+          for (let i = 0; i < 6; i++) {
+            // 每次要随机从数组里面抽取一个
+            // random 是数组的索引号 是随机的
+            let random = Math.floor(Math.random() * arr.length)
+            // str = str + arr[random]
+            str += arr[random]
+          }
+          return str
+        } else {
+          // 4.否则false则返回rgb颜色
+
+          // 5.要的是随机颜色
+          let r = Math.floor(Math.random() * 256)
+          let g = Math.floor(Math.random() * 256)
+          let b = Math.floor(Math.random() * 256)
+          return `rgb(${r},${g},${b})`
+        }
+      }
+      // 2.调用函数 布尔值
+      console.log(getRandomColor(false))
+      console.log(getRandomColor(true))
+      console.log(getRandomColor()) */
+
+      // 演示类似字符串拼接
+      /* let str = '#'
+        str += 'f'，一次就是#f,6次累加就是#ffffff 
+        
+        
+  */
+    </script>
+  </body>
+</html>

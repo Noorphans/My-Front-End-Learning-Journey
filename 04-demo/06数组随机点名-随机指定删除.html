@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.请把 ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操'] 随机显示一个名字到页面中
+      let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+      // 1.作为数组索引号 这个随机数是0-6
+      let random = Math.floor(Math.random() * arr.length)
+      document.write(arr[random])
+
+      // 2.请把 ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操'] 随机显示一个名字到页面中，但不允许重复显示（出现过的删除掉)
+
+      // arr.splice(起始位置即索引号, 删除几个元素)
+      arr.splice(random, 1)
+      console.log(arr)
+    </script>
+  </body>
+</html>

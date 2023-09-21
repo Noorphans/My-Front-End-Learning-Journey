@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 一. 随机生成 1~10之间的一个数，用户输入一个数
+
+      /*
+      1.大于该数字，就提示，数字猜大了，继续猜
+      2.小于该数字，数字猜小了，继续猜
+      3.猜对了，程序结束
+      */
+      // 1.取到 N ~ M 的随机整数
+      function getRandom(N, M) {
+        return Math.floor(Math.random() * (M - N + 1)) + N
+      }
+      let random = getRandom(1, 10)
+      console.log(random)
+
+      // 4.需要不断循环 不确定次数while
+      while (true) {
+        // 2.用户输入一个数
+        let num = +prompt('请输入你猜的数字:')
+        // 3.判断输出
+        if (num > random) {
+          alert('您猜大了')
+        } else if (num < random) {
+          alert('您猜小了')
+        } else {
+          alert('猜对啦，真厉害')
+          break // 退出循环
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 左闭右开 能取到0不能取到1 中间的一个随即小数
+      // console.log(Math.random())
+
+      // 生成0-10的随机小数
+      // console.log(Math.floor(Math.random() * (10 + 1)))
+      // let arr = ['red ', 'green', 'blue']
+      // let random = Math.floor(Math.random() * arr.length)
+      // console.log(arr[random])
+
+      // 随机生成5-10的随机数
+      // Math.floor(Math.random() * (5 + 1)) + 5
+      // console.log(Math.floor(Math.random() * 6)) + 5
+
+      // 数组随机抽取某个元素
+      // let arr = ['橘子', '苹果', '香蕉', '葡萄']
+      // let random = Math.floor(Math.random() * arr.length)
+      // console.log(arr[random])
+
+      //随机生成N-M之间的随机数
+      // Math.floor(Math.random() * (M - N + 1)) + N
+
+      function getRandom(N, M) {
+        return Math.floor(Math.random() * (M - N + 1)) + N
+      }
+      console.log(getRandom(2, 9)) //不会出现小于2大于9的数
+    </script>
+  </body>
+</html>
