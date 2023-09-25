@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>渲染英雄列表案例</title>
+    <link rel="stylesheet" href="../css/hero.css" />
+  </head>
+  <body>
+    <!-- 利用对象数组渲染英雄列表案例 -->
+    <!-- <ul class="list">
+		
+	</ul> -->
+    <script>
+      let arr = [
+        { name: '金蝉', imgSrc: '../images/hero/1.webp' },
+        { name: '海月', imgSrc: '../images/hero/2.webp' },
+        { name: '戈雅', imgSrc: '../images/hero/3.webp' },
+        { name: '桑启', imgSrc: '../images/hero/4.webp' },
+        { name: '暃', imgSrc: '../images/hero/5.webp' },
+        { name: '云樱', imgSrc: '../images/hero/6.webp' },
+        { name: '艾琳', imgSrc: '../images/hero/7.webp' }
+      ]
+      let str = ''
+      for (let i = 0; i < arr.length; i++) {
+        str += `
+				<li>
+          <img src="${arr[i].imgSrc}" title="${arr[i].name}">
+        </li>
+			`
+      }
+      document.write(`
+		<ul class="list">
+			${str}
+		</ul>
+		`)
+    </script>
+  </body>
+</html>

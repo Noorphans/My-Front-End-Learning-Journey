@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="nav">导航栏</p>
+    <ul class="nav">
+      <li>我的首页</li>
+      <li>产品介绍</li>
+      <li>练习方式</li>
+    </ul>
+    <script>
+      // 1.获取元素
+      const lis = document.querySelectorAll('.nav li')
+      // console.log(lis)
+      for (let i = 0; i < lis.length; i++) {
+        console.log(lis[i]) // 每一个小li对象
+      }
+
+      // 只有一个元素也是伪数组
+      // const p = document.querySelectorAll('#nav')
+      // console.log(p)
+      // p[0].style.color = 'red' 一个元素改为红色
+    </script>
+  </body>
+</html>

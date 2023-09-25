@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = 10
+      let num2 = num1
+      num2 = 20
+      console.log(num1) // 结果是？ 10
+      // num1为10,10又赋给num2，num2存的还是10，这时把20赋给num2，但不影响num1
+
+      let obj1 = {
+        age: 18
+      }
+      let obj2 = obj1
+      // 修改属性
+      obj2.age = 20
+      console.log(obj1.age) // 20
+      // obj1的age为18,obj1赋给obj2，obj1的的地址给obj2，这时修改obj2的age为20，先找到地址再找到对象修改内容
+    </script>
+  </body>
+</html>

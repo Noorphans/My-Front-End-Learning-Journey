@@ -7,33 +7,26 @@
   </head>
   <body>
     <script>
-      // 一. 随机生成 1~10之间的一个数，用户输入一个数
-      // 1.取到 N ~ M 的随机整数
+      // 猜数字游戏，设定次数，最多猜8次
       function getRandom(N, M) {
         return Math.floor(Math.random() * (M - N + 1)) + N
       }
-      let random = getRandom(1, 10)
-
-      // 开关变量，控制到底要不要弹窗提示
-      let flag = true //三次没猜对永远执行最后一句
-      // 2. 判断 设定三次 假设三次没猜对直接退出
-      for (let i = 1; i <= 3; i++) {
-        let num = +prompt('请输入1-10之间的数字')
-        // 3.判断是否猜对
+      let random = getRandom(0, 20)
+      let flag = true
+      for (let i = 0; i < 8; i++) {
+        let num = +prompt('请输入1-20之间的数字')
         if (num > random) {
           alert('您猜大了，继续')
         } else if (num < random) {
           alert('您猜小了，继续')
         } else {
-          // 把flag改为false，就不再执行最后一句
           flag = false
           alert('猜对了，真厉害')
           break
         }
       }
-      // 写到for的外面来
       if (flag) {
-        alert('次数已经用完')
+        alert('你咋老是猜错')
       }
     </script>
   </body>
