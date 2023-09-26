@@ -7,12 +7,17 @@
   </head>
   <body>
     <img src="../images/hero/1.webp" alt="" />
+    <a href="https://www.sina.com.cn/" class="">跳转</a>
     <script>
       // 1.获取图片元素
       const pic = document.querySelector('img')
+
+      // 获取链接元素
+      const a = document.querySelector('a')
       // 2.修改图片对象的属性
       pic.src = '../images/hero/10.webp'
       pic.title = '夏洛特'
+      a.href = 'https://onestar.love/'
     </script>
   </body>
 </html>
