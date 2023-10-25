@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .tab {
+        width: 590px;
+        height: 340px;
+        margin: 20px;
+        border: 1px solid #e4e4e4;
+      }
+
+      .tab-nav {
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tab-nav h3 {
+        font-size: 24px;
+        font-weight: normal;
+        margin-left: 20px;
+      }
+
+      .tab-nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .tab-nav ul li {
+        margin: 0 20px;
+        font-size: 14px;
+      }
+
+      .tab-nav ul li a {
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        color: #333;
+      }
+
+      .tab-nav ul li a.active {
+        border-color: #e1251b;
+        color: #e1251b;
+      }
+
+      .tab-content {
+        padding: 0 16px;
+      }
+
+      .tab-content .item {
+        display: none;
+      }
+
+      .tab-content .item.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <div class="tab-nav">
+        <h3>每日特价</h3>
+        <ul>
+          <li><a class="active" href="javascript:;" data-id="0">精选</a></li>
+          <li><a href="javascript:;" data-id="1">美食</a></li>
+          <li><a href="javascript:;" data-id="2">百货</a></li>
+          <li><a href="javascript:;" data-id="3">个护</a></li>
+          <li><a href="javascript:;" data-id="4">预告</a></li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="item active"><img src="../images/Tab/tab00.png" alt="" /></div>
+        <div class="item"><img src="../images/Tab/tab01.png" alt="" /></div>
+        <div class="item"><img src="../images/Tab/tab02.png" alt="" /></div>
+        <div class="item"><img src="../images/Tab/tab03.png" alt="" /></div>
+        <div class="item"><img src="../images/Tab/tab04.png" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      // 需求：优化程序，将tab切换案例改为事件委托写法
+      /* 
+     思路：
+      ①：给a的父级 注册点击事件，采取事件委托方式
+      ②： 如果点击的是A , 则进行排他思想，删除添加类
+      ③： 注意判断的方式 利用 e.target.tagName
+      ④： 因为没有索引号了，所以这里我们可以自定义属性，给5个链接添加序号
+      ⑤： 下面大盒子获取索引号的方式 e.target.dataset.id 号， 然后进行排他思想 
+      */
+
+      // 1. 获取 ul 父元素 因为 ul只有一个
+      const ul = document.querySelector('.tab-nav ul')
+
+      // nth写法太长从1开始的
+      // 写法二：获取 5个 item
+      const items = document.querySelectorAll('.tab-content .item')
+      // 2. 添加事件
+      ul.addEventListener('click', function (e) {
+        // console.log(e.target) //是我们点击的那个对象
+        // 我们只有点击了 a 才会 进行 添加类和删除类操作
+        console.log(e.target.tagName) // e.target.tagName 点击那个对象的 标签名
+        if (e.target.tagName === 'A') {
+          // console.log('我选的是a')
+          // 排他思想 ，先移除原来的active
+          document.querySelector('.tab-nav .active').classList.remove('active')
+          //当前元素添加 active  是 e.target
+          // this指向函数调用者 这里this指向ul 不能用this
+          e.target.classList.add('active')
+
+          // 下面大盒子模块
+          // console.log(e.target.dataset.id)
+          // const i = +e.target.dataset.id
+          const i = +e.target.dataset.id
+          // i取过来的是字符串 所以转为数字
+
+          // 排他思想 ，先移除原来的active
+          document.querySelector('.tab-content .active').classList.remove('active')
+          // 对应的大盒子 添加 active
+          // document.querySelector(`.tab-content .item:nth-child(${i + 1})`).classList.add('active') //nth写法太长,从1开始 所以要加1
+          items[i].classList.add('active')
+        }
+      })
+    </script>
+  </body>
+</html>

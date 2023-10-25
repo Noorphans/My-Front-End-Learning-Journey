@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>点击</button>
+    <script>
+      const btn = document.querySelector('button')
+      btn.onclick = function () {
+        alert(11)
+      }
+      btn.onclick = function () {
+        alert(22)
+      } // 结果被后者22覆盖
+      // 相当于赋值的方式
+      // let num = 10
+      // num =20
+
+      btn.addEventListener('click', function () {
+        alert(11)
+      })
+      btn.addEventListener('click', function () {
+        alert(22)
+      }) // 11和22不会被覆盖
+    </script>
+  </body>
+</html>
