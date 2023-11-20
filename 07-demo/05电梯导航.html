@@ -81,20 +81,20 @@
 
     <script>
       // 1. 获元取素
-      const items = document.querySelectorAll('.item')
+      const items = document.querySelectorAll(".item");
       // 内容的盒子获取
-      const neirongs = document.querySelectorAll('.neirong')
+      const neirongs = document.querySelectorAll(".neirong");
       // 2. 左侧aside 模块 点击谁，谁高亮
       for (let i = 0; i < items.length; i++) {
-        items[i].addEventListener('click', function () {
+        items[i].addEventListener("click", function () {
           // 找到上一个active 移除类
-          document.querySelector('.aside .active').classList.remove('active')
+          document.querySelector(".aside .active").classList.remove("active");
           // 点击谁谁添加类
-          this.classList.add('active')
+          this.classList.add("active");
           // 3. 右侧内容跟随走动  让页面滚动到对应的offsetTop值位置
           // console.log(neirongs[i].offsetTop) 不用给单位
-          document.documentElement.scrollTop = neirongs[i].offsetTop
-        })
+          document.documentElement.scrollTop = neirongs[i].offsetTop;
+        });
       }
     </script>
   </body>
