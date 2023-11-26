@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      // 以下let能改为const吗？
-      /*  
-     document.write('我叫' + '流星雨')
-      let uname = '流星雨'
-      let song = '告白'
-      document.write(uname + song)
 
-  
-      let num1 = +prompt('请输入第一个值')
-      let num2 = +prompt('请输入第二个值')
-      alert(`两者和为${num1} + ${num2}`) 
-      值未做改变 可以改为const
-      */
-      // let num = 1
-      // num = num + 1
-      // //  num += 1
-      // console.log(num) //值发生改变 不能const
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      // let arr = ['blue', 'black']
-      // arr.push('white')
-      // console.log(arr) // 地址值未改变，可以const
+<body>
+  <script>
+    // 以下let能改为const吗？
+    /*  
+    document.write('我叫' + '流星雨') // 我叫流星雨
+    let uname = '流星雨'
+    let song = '告白'
+    document.write(uname + song)  // 流星雨告白
 
-      let person = {
-        uname: 'sally',
-        age: 18,
-        sex: '女'
-      }
-      person.height = 159
-      console.log(person) // 地址值未改变，可以const
-    </script>
-  </body>
+ 
+    let num1 = +prompt('请输入第一个值')
+    let num2 = +prompt('请输入第二个值')
+    alert(`两者和为${num1} + ${num2}`) 
+    值未做改变 可以改为const
+    */
+
+    // let num = 1
+    // num = num + 1
+    // //  num += 1
+    // console.log(num) //值发生改变 不能const
+
+    let arr = ['blue', 'black']
+    arr.push('white')
+    console.log(arr) // 地址值未改变，可以const
+    // 报错,arr得到的是新数组，又开辟新数组，不同数组和对象就有不同地址值
+    // arr = [1, 2, 4]
+    // console.log(arr)
+
+
+
+    // let person = {
+    //   uname: 'sally',
+    //   age: 18,
+    //   sex: '女'
+    // }
+    // person.height = 159
+    // console.log(person) // 地址值未改变，可以const
+  </script>
+</body>
+
 </html>

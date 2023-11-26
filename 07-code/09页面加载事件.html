@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>老代码script写法</title>
-    <script>
-      /* const btn = document.querySelector('button')
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <script>
+    // 老代码script写法
+    /* const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      alert(11)  // 11弹不出来，不能读取该属性 为空，从上往下执行 代码抓不到btn
+    }) */
+
+    // 使用页面加载事件
+    // 等待页面所有资源加载完毕，就回去执行回调函数
+    // window.addEventListener('load', function () {
+    //   const btn = document.querySelector('button')
+    //   btn.addEventListener('click', function () {
+    //     alert(11)
+    //   })
+    // })
+
+    // img.addEventListener('load', function () {
+    //   // 等待图片加载完毕，再去执行里面的代码
+    // })
+
+    // DOMContentLoaded事件
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.querySelector('button')
       btn.addEventListener('click', function () {
-        alert(11)  // 11弹不出来，不能读取该属性 为空，从上往下执行 代码抓不到btn
-      }) */
-
-      // 使用页面加载事件
-      // 等待页面所有资源加载完毕，就回去执行回调函数
-      // window.addEventListener('load', function () {
-      //   const btn = document.querySelector('button')
-      //   btn.addEventListener('click', function () {
-      //     alert(11)
-      //   })
-      // })
-
-      // img.addEventListener('load', function () {
-      //   // 等待图片加载完毕，再去执行里面的代码
-      // })
-
-      // DOMContentLoaded事件
-      document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.querySelector('button')
-        btn.addEventListener('click', function () {
-          alert(11)
-        })
+        alert(11)
       })
-    </script>
-  </head>
-  <body>
-    <button>点击</button>
-  </body>
+    })
+  </script>
+</head>
+
+<body>
+  <button>点击</button>
+</body>
+
 </html>

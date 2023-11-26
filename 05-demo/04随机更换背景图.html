@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background-image: url(../images/course/course01.png) no-repeat top center / cover;
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      function getRandom(N, M) {
-        return Math.floor(Math.random() * (M - N + 1)) + N
-      }
-      // console.log(document.body) // 页面整个body是唯一的 就直接打印获取
-      const random = getRandom(1, 8)
-      console.log('::' + random)
-      document.body.style.backgroundImage = `url(../images/course/course0${random}.png) `
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      background-image: url(../images/course/course01.png) no-repeat top center / cover;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    // console.log(document.body) // 页面整个body是唯一的标签 就直接打印获取
+    const random = getRandom(1, 8)
+    console.log('::' + random)
+    document.body.style.backgroundImage = `url(../images/course/course0${random}.png) `
+  </script>
+</body>
+
 </html>

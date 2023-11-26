@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>通过 style 属性修改样式</title>
-    <style>
-      div {
-        width: 200px;
-        height: 200px;
-        background-color: pink;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="box"></div>
-    <script>
-      // 1.获取元素
-      const box = document.querySelector('.box')
-      // 2.修改样式属性 对象.style.样式属性 = '值' 别忘跟单位
-      box.style.width = '300px'
-      // 样式属性是-连接的单词 采取小驼峰命名法
-      box.style.backgroundColor = 'hotpink'
-      box.style.border = '2px solid gray'
-      box.style.borderTop = '2px solid green'
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通过 style 属性修改样式</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    // 1.获取元素
+    const box = document.querySelector('.box')
+    // 2.修改样式属性 对象.style.样式属性 = '值' 别忘跟单位
+    box.style.width = '300px'
+    // 样式属性是-连接的单词 采取小驼峰命名法
+    box.style.backgroundColor = 'hotpink'
+    box.style.border = '2px solid gray'
+    box.style.borderTop = '2px solid green'
+  </script>
+</body>
+
 </html>

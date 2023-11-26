@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .wrapper {
-        width: 840px;
-        height: 420px;
-        background: url(../images/course/course01.png) no-repeat center / cover;
-        padding: 100px 250px;
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <strong>传智教育年会抽奖</strong>
-      <h1>
-        一等奖：
-        <span id="one">???</span>
-      </h1>
-      <h3>
-        二等奖：
-        <span id="two">???</span>
-      </h3>
-      <h5>
-        三等奖：
-        <span id="three">???</span>
-      </h5>
-    </div>
-    <script>
-      // 从数组随机抽取一等奖、二等奖和三等奖，显示到对应的标签里面
-      // 数组名单 '周杰伦', '刘德华', '周星驰', 'Pink老师', '张学友'
 
-      /* 
-      1:一等奖:随机生成一个数字（0~数组长度），找到对应数组的名字
-      2:通过innerText 或者 innerHTML 将名字写入span元素内部
-      3:二等奖依次类推 
-      */
-      // 1.声明数组
-      const personArr = ['周杰伦', '刘德华', '周星驰', '周杰伦', '张学友']
-      // 2. 先做一等奖
-      // 2.1 随机数 数组的下标
-      const random = Math.floor(Math.random() * personArr.length)
-      // console.log(personArr[random])
-      // 2.2 获取one 元素
-      const one = document.querySelector('#one')
-      // 2.3 把名字给 one
-      one.innerHTML = personArr[random]
-      // 删除已出现过的
-      personArr.splice(random, 1)
-      // console.log(personArr)
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .wrapper {
+      width: 840px;
+      height: 420px;
+      background: url(../images/course/course01.png) no-repeat center / cover;
+      padding: 100px 250px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
 
-      // 4. 二等奖
-      // 2.1 随机数 数组的下标
-      const random2 = Math.floor(Math.random() * personArr.length)
-      // console.log(personArr[random2])
-      // 2.2 获取two 元素
-      const two = document.querySelector('#two')
-      // 2.3 把名字给 two
-      two.innerHTML = personArr[random2]
-      // 删除已出现过的
-      personArr.splice(random2, 1)
-      // console.log(personArr)
+<body>
+  <div class="wrapper">
+    <strong>传智教育年会抽奖</strong>
+    <h1>
+      一等奖：
+      <span id="one">???</span>
+    </h1>
+    <h3>
+      二等奖：
+      <span id="two">???</span>
+    </h3>
+    <h5>
+      三等奖：
+      <span id="three">???</span>
+    </h5>
+  </div>
+  <script>
+    // 从数组随机抽取一等奖、二等奖和三等奖，显示到对应的标签里面
+    // 数组名单 '周杰伦', '刘德华', '周星驰', 'Pink老师', '张学友'
 
-      // 4. 三等奖
-      // 2.1 随机数 数组的下标
-      const random3 = Math.floor(Math.random() * personArr.length)
-      // console.log(personArr[random3])
-      // 2.2 获取three 元素
-      const three = document.querySelector('#three')
-      // 2.3 把名字给 three
-      three.innerHTML = personArr[random3]
-      // 删除已出现过的
-      personArr.splice(random3, 1)
-      // console.log(personArr)
-    </script>
-  </body>
+    /* 
+    1:一等奖:随机生成一个数字（0~数组长度），找到对应数组的名字
+    2:通过innerText 或者 innerHTML 将名字写入span元素内部
+    3:二等奖依次类推 
+    */
+    // 1.声明数组
+    const personArr = ['周杰伦', '刘德华', '周星驰', '周杰伦', '张学友']
+    // 2. 先做一等奖
+    // 2.1 随机数 数组的下标
+    const random = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random])
+    // 2.2 获取one 元素
+    const one = document.querySelector('#one')
+    // 2.3 把名字给 one
+    one.innerHTML = personArr[random]
+    // 删除已出现过的
+    personArr.splice(random, 1)
+    // console.log(personArr)
+
+    // 4. 二等奖
+    // 2.1 随机数 数组的下标
+    const random2 = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random2])
+    // 2.2 获取two 元素
+    const two = document.querySelector('#two')
+    // 2.3 把名字给 two
+    two.innerHTML = personArr[random2]
+    // 删除已出现过的
+    personArr.splice(random2, 1)
+    // console.log(personArr)
+
+    // 4. 三等奖
+    // 2.1 随机数 数组的下标
+    const random3 = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random3])
+    // 2.2 获取three 元素
+    const three = document.querySelector('#three')
+    // 2.3 把名字给 three
+    three.innerHTML = personArr[random3]
+    // 删除已出现过的
+    personArr.splice(random3, 1)
+    // console.log(personArr)
+  </script>
+</body>
+
 </html>

@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      // 开启定时器 写法1：匿名函数写法：setInterval(函数, 毫秒)
 
-      // setInterval(function () {
-      //   console.log('一秒执行一次')
-      // }, 1000)
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      // 写法2：具名函数写法：setInterval(函数名, 间隔时间) 函数名不加小括号
-      function fn() {
-        console.log('三秒执行一次')
-      }
+<body>
+  <script>
+    // 一、开启定时器 
+    // 写法1：匿名函数写法：setInterval(函数, 毫秒)
+    // setInterval(function () {
+    //   console.log('一秒执行一次')
+    // }, 1000)
 
-      let n = setInterval(fn, 3000) // 每间隔3秒执行一次
-      console.log(n) // 序号为2
+    // 写法2：具名函数写法：setInterval(函数名, 间隔时间) 函数名不加小括号
+    // setInterval(fn, 3000)
+    function fn() {
+      console.log('三秒执行一次')
+    }
 
-      // 关闭定时器 clearInterval
-      clearInterval(n)
+    let n = setInterval(fn, 3000) // 每间隔3秒执行一次
+    console.log(n) // 序号为2
+    // 定时器返回的是一个id数字(也就是一个序号）
 
-      // let m = setInterval(function () {
-      //   console.log(11)
-      // }, 1000)
-      // console.log(m)
+    // 写法3：
+    // setInterval('fn()', 1000) 极为少见的写法
 
-      // 写法3：
-      // setInterval('fn()', 1000) 极为少见的写法
 
-      // 不能用const
-      // const num = 10
-      // num = 10 //没有重新赋值，重新赋值也是错的
-      // console.log(num)
 
-      // 练习
-      let i = 1
-      setInterval(function () {
-        i++
-        document.write(`<br>${i}`)
-      }, 100)
-    </script>
-  </body>
+    // 二、关闭定时器 clearInterval
+    clearInterval(n)
+
+    // let m = setInterval(function () {
+    //   console.log(11)
+    // }, 1000)
+    // console.log(m)
+
+
+
+    // 不能用const
+    // const num = 10
+    // num = 10 //报错 没有重新赋值，重新赋值也是错的
+    // console.log(num) // num=10
+
+    // 练习 自动输入到200
+    // let i = 1
+    // setInterval(function () {
+    //   i++
+    //   document.write(`<br>${i}`)
+    // }, 100)
+  </script>
+</body>
+
 </html>
