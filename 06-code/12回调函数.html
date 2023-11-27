@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      function fn() {
-        console.log('我是回调函数')
-      }
-      setInterval(fn, 1000)
 
-      // box.addEventListener('click', function () {
-      //   console.log('我也是回调函数')
-      // })
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn() {
+      console.log('我是回调函数')
+    }
+    // fn作为参数传递给了setInterval，fn就是回调函数
+    setInterval(fn, 1000)
+
+    // box.addEventListener('click', function () {
+    //   console.log('我也是回调函数')
+    // })
+  </script>
+</body>
+
 </html>

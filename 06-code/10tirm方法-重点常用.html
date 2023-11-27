@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>处理字符串方法</title>
-  </head>
-  <body>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <script>
-      // 去除字符串左右两边空格
-      const str = '   blue  '
-      console.log(str.trim())
-      const tx = document.querySelector('textarea')
-      tx.addEventListener('keyup', function (e) {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>处理字符串方法</title>
+</head>
+
+<body>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <script>
+    // 去除字符串左右两边空格
+    const str = '   blue  '
+    console.log(str.trim())
+    const tx = document.querySelector('textarea')
+    tx.addEventListener('keyup', function (e) {
+      // console.log(tx.value)
+      if (e.key === 'Enter') {
         // console.log(tx.value)
-        if (e.key === 'Enter') {
-          // console.log(tx.value)
-          console.log(tx.value.trim() === '')
-        }
-      })
-    </script>
-  </body>
+        console.log(tx.value.trim() === '')
+      }
+    })
+  </script>
+</body>
+
 </html>

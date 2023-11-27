@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button>点击</button>
-    <script>
-      // const num = 10
-      const btn = document.querySelector('button')
-      btn.addEventListener('click', function () {
-        const num = Math.random()
-        console.log(num)
-        // 这里的const再次声明使用，用到了垃圾回收机制，即如果在一个函数里的这个变量，当我们执行完这个函数，这个变量不再使用，它会进行销毁回收
-        // 如这里是 当我给按钮做了一次点击事件，函数执行完了，执行完了const声明的num没有用了，这时就用到JS中的垃圾回收机制，相当于把这两句话删除了，而再次点击就会创建一个新的num变量，就不会冲突报错了
-      })
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <button>点击</button>
+  <script>
+    // 外面和里面都声明一个const，不会报错，不冲突，因为里面的是在函数内部，属于局部作用域
+    // const num = 10
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      const num = Math.random()
+      console.log(num)
+      // 这里的const再次声明使用，用到了垃圾回收机制，即如果在一个函数里的这个变量，当我们执行完这个函数，这个变量不再使用，它会进行销毁回收
+      // 如这里是 当我给按钮做了一次点击事件，函数执行完了，执行完了const声明的num没有用了，这时就用到JS中的垃圾回收机制，相当于把这两句话删除了，而再次点击就会创建一个新的num变量，就不会冲突报错了
+    })
+  </script>
+</body>
+
 </html>
