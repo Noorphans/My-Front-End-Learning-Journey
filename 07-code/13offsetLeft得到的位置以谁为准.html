@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      div {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        background-color: pink;
-        margin: 100px;
-      }
-      p {
-        width: 100px;
-        height: 100px;
-        background-color: purple;
-        margin: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <p></p>
-    </div>
-    <script>
-      const div = document.querySelector('div')
-      // console.log(div.offsetLeft)
-      const p = document.querySelector('p')
-      // 检测盒子的位置  最近一级带有定位的祖先元素
-      console.log(p.offsetLeft)
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    div {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px;
+    }
+
+    p {
+      width: 100px;
+      height: 100px;
+      background-color: purple;
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p></p>
+  </div>
+  <script>
+    const div = document.querySelector('div')
+    // console.log(div.offsetLeft) // 结果108 因为body有个8像素的外边距，100+8
+    const p = document.querySelector('p')
+    // 检测盒子的位置  查找最近一级带有定位的祖先元素
+    console.log(p.offsetLeft) // 父加上定位，就是50
+    //div父没加定位，就是158，因为子盒子到父盒子是50像素距离，父到边框是100距离加一个外边距8
+  </script>
+</body>
+
 </html>
