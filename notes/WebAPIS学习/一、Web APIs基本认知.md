@@ -493,14 +493,15 @@ arr[2] = 3
 
   
 
-  > * querySelectorAll()得到的是一个`伪数组`
+
+> * querySelectorAll()得到的是一个`伪数组`
 >
-  >   \- 有长度有索引号的数组
-  >
-  >   \- 但是没有pop() push()等数组方法
-  >   
-  >   \- 想要得到里面的每一个对象，则需要遍历(for)方式获得
-  
+>   \- 有长度有索引号的数组
+>
+>   \- 但是没有pop() push()等数组方法
+>
+>   \- 想要得到里面的每一个对象，则需要遍历(for)方式获得
+
   \- 举例说明：
 
   ```html
@@ -539,7 +540,7 @@ arr[2] = 3
   </body>
   </html>
   ```
-  
+
   
 
   >**注意**：哪怕**只有一个元素**，通过`querySelectorAll()`获取过来的也是一个`伪数组`，里面只有一个元素而已(也不能直接改样式)
@@ -585,11 +586,11 @@ arr[2] = 3
   </body>
   </html>
   ```
+
   
-  
-  
+
   > 只有一个元素的情况下,可以用p[0] `数组中的第一个元素`
-  
+
   ```javascript
     const p = document.querySelectorAll('#nav')
     p[0].style.color = 'red'
@@ -1094,9 +1095,13 @@ button.disabled = true // 禁用按钮
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+     /* 带中括号的为属性选择器，根据属性来选择 */
+    /* 选择input，他有一个属性为value */
     /* input[value] {
       color: red;
     } */
+      
+    /*input两个都有type，但是值不同 */
     input[type=text] {
       color: red;
     }
@@ -1116,6 +1121,12 @@ button.disabled = true // 禁用按钮
 
 </html>
 ```
+
+> **分析：**
+>
+> 1. `属性选择器用中括号[]代替,根据属性来选择`
+> 2. input[value]， 选择input，他有一个属性为value
+> 3. input[type=text]， input 两个都有type，但是值不同 
 
 
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>我是老大</li>
+  </ul>
+  <script>
+    // // 1. 创建节点简洁版
+    // const div = document.createElement('div')
+    // // console.log(div)
+
+    // // 2. 追加节点  作为最后一个子元素
+    // 获取ul
+    const ul = document.querySelector('ul')
+    // 创建新节点，ul里放小li
+    const li = document.createElement('li')
+    li.innerHTML = '我是li' // 往li里面添加内容
+    // ul.appendChild(li) // 追加到li里面，在老大后面
+
+    // 3. 追加节点 插入到父元素中某个子元素的前面
+    // ul.children // ul的孩子，children得到的是数组，ul.children得到所有孩子，老大是孩子中的一个，也是最大的那个
+    // insertBefore(插入的元素, 放到哪个元素的前面)
+    ul.insertBefore(li, ul.children[0]) // ul.children[0]节点前插入，在老大前面
+  </script>
+</body>
+
+</html>

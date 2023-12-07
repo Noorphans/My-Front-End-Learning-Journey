@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 40px;
+      border: 1px solid pink;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    /* 
+    需求：将当前时间以：YYYY-MM-DD HH:mm 形式显示在页面 2008-08-08 08:08
+    分析：
+    ①：调用日期对象方法进行转换
+    ②：记得数字要补0
+    ③：字符串拼接后，通过 innerText 给 标签
+    */
+
+    const div = document.querySelector('div')
+    function getMyDate() {
+      const date = new Date()
+
+      // 数字补0
+      let h = date.getHours()
+      let m = date.getMinutes()
+      let s = date.getSeconds()
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+      return `今天是：${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 ${h}:${m}:${s}`
+    }
+    div.innerHTML = getMyDate()
+    // 让时间变动 加定时器
+    setInterval(function () {
+      div.innerHTML = getMyDate()
+    }, 1000)
+  </script>
+</body>
+
+</html>

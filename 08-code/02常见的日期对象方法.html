@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 获得日期对象
+    const date = new Date() // 实例化对象
+    // 调用时间对象方法
+    // 通过方法分别获取年、月、日，时、分、秒
+    console.log(date.getFullYear()) // 四位年份
+    console.log(date.getMonth() + 1)  // 月份是1-12，取值是0-11，所以要 + 1
+    console.log(date.getDate())
+    console.log(date.getDay())  // 返回的是星期几，取值0-6,0代表周日
+    console.log(date.getHours())
+    console.log(date.getMinutes())
+    console.log(date.getSeconds())
+  </script>
+</body>
+
+</html>

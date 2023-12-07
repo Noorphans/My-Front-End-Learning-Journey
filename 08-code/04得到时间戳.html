@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. getTime()
+    const date = new Date()
+    console.log(date.getTime())
+    // 2. +new Date()
+    console.log(+new Date()) // +号转换成数字型
+    // 3. Date.now()
+    console.log(Date.now());
+
+
+    // 2. +new Date()
+    console.log(+new Date()) // 当前时间戳
+    console.log('-----------------');
+    console.log(+new Date('2023-12-5 18:30:00')) // 指定时间 比当前时间戳更大
+
+
+    // 我要根据日期 Day()  0 ~ 6  返回的是 星期一
+    const arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+    // const date = new Date()
+    console.log(arr[new Date().getDay()])
+
+    // 等同于以下写法
+    // const date = new Date()
+    // console.log(date.getDay)
+
+  </script>
+</body>
+
+</html>

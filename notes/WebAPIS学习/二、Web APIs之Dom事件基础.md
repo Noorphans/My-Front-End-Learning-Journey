@@ -104,11 +104,11 @@
      `addEventListener` 的第2个参数是函数，这个函数会在事件被触发时立即被调用，在这个函数中可以编写任意逻辑的代码，如改变 DOM 文本颜色、文本内容等。
 
      ```javascript
-  <script>
+     <script>
        // 双击事件类型
-    btn.addEventListener('dblclick', function () {
+       btn.addEventListener('dblclick', function () {
          console.log('等待事件被触发...')
-      
+         
          const text = document.querySelector('.text')
          // 改变 p 标签的文字颜色
          text.style.color = 'red'
@@ -117,12 +117,13 @@
        })
      </script>
      ```
-   
+     
      结论：【事件处理程序】决定了事件触发后应该执行的逻辑。
+
    
+
    
-   
-   
+
 
 
 ## 解惑-事件监听之const声明
@@ -337,8 +338,6 @@ btn.addEventListener('click', function () {
 
 
 3. `mouseleave` ； mouseout   鼠标离开
-
-
 
 \- 举例说明1：mouseleave 监听鼠标是否移出 DOM 元素
 
