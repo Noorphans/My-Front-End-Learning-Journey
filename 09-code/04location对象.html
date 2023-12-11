@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" name="search"> <button>搜索</button>
+  </form>
+  <a href="#/music">音乐</a>
+  <a href="#/download">下载</a>
+
+  <button class="reload">刷新页面</button>
+  <script>
+    // console.log(window.location)
+    // console.log(location)
+
+    // // 可以得到当前文件URL地址
+    // console.log(location.href)
+    // // href 经常用href做页面跳转，利用js的方法去跳转页面
+    // location.href = 'http://www.baidu.com'
+
+    // // 2. search属性  得到 ? 后面的地址
+    // console.log(location.search)  // ?search=笔记本
+
+    // // 3. hash属性  得到 # 后面的地址
+    // console.log(location.hash)
+
+    // 4. reload 方法  刷新页面
+    const btn = document.querySelector('.reload')
+    btn.addEventListener('click', function () {
+      // location.reload() // 页面刷新
+      location.reload(true) // 强制页面刷新 ctrl+f5
+    })
+
+  </script>
+</body>
+
+</html>

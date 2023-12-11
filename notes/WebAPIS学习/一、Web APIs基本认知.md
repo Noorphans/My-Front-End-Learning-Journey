@@ -323,9 +323,9 @@ arr[2] = 3
 
 * 网页所有内容都在document里面
 
-![image-20230923195446590](http://images.newstar.net.cn/sally-imgs/image-20230923195446590.png)
+​     ![image-20230923195446590](http://images.newstar.net.cn/sally-imgs/image-20230923195446590.png) 
 
-
+ 
 
 * document` 是 JavaScript 内置的专门用于 DOM 的对象，该对象包含了若干的属性和方法，`document` 是学习 DOM 的核心。
 

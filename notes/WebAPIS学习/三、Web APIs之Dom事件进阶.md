@@ -401,9 +401,11 @@ btn.removeEventListener('click', fn)
    * (委托给父元素)给`父元素注册事件`，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件
    * ul.addEventListener('click' , function(){}) 执行父级点击事件
 
-   ![image-20231128195941887](http://images.newstar.net.cn/sally-imgsimage-20231128195941887.png)
+      ![image-20231128195941887](http://images.newstar.net.cn/sally-imgsimage-20231128195941887.png) 
 
-<img src="http://images.newstar.net.cn/sally-imgs/image-20231023142243502.png">
+​               <img src="http://images.newstar.net.cn/sally-imgs/image-20231023142243502.png"> 
+
+
 
 4. 图片分析：
    * 大的父元素ul 包含li子元素
@@ -689,7 +691,7 @@ ul.addEventListener('click', function (e) {
 
    * 这两个值是可`读写`的，可以读取，也可以修改（赋值）
 
-     ![image-20231024173935981](http://images.newstar.net.cn/sally-imgs/image-20231024173935981.png)
+     ![image-20231024173935981](http://images.newstar.net.cn/sally-imgs/image-20231024173935981.png) 
 
      
 
@@ -925,7 +927,7 @@ window.addEventListener('resize', function () {
   1. `clientwidth和clientHeight`
   2. 获取元素的可见部分宽高(`不包含边框border`，margin，滚动条等）
 
-![image-20231025163043710](http://images.newstar.net.cn/sally-imgs/image-20231025163043710.png)
+​      ![image-20231025163043710](http://images.newstar.net.cn/sally-imgs/image-20231025163043710.png) 
 
 
 
@@ -938,7 +940,7 @@ window.addEventListener('resize', function () {
   2. 简单说，就是**通过js**的方式，得到`元素在页面中的位置`
   3. 这样我们可以做，页面滚动到这个位置，就可以做某些操作，省去计算了
 
-![image-20231025182232446](http://images.newstar.net.cn/sally-imgs/image-20231025182232446.png)
+   ![image-20231025182232446](http://images.newstar.net.cn/sally-imgs/image-20231025182232446.png) 
 
 
 
@@ -960,7 +962,7 @@ window.addEventListener('resize', function () {
   1. 获取元素距离自己定位父级元素的左、上距
   2. `offsetLeft` 和 `offsetTop` 注意是`只读`属性
 
-![image-20231025182659609](http://images.newstar.net.cn/sally-imgs/image-20231025182659609.png)
+  ![image-20231025182659609](http://images.newstar.net.cn/sally-imgs/image-20231025182659609.png) 
 
 
 

@@ -49,7 +49,7 @@
 
 **使用场景：**因为日期对象返回的数据我们不能直接使用，所以需要转换为实际开发中`常用`的格式
 
-![image-20231204221556358](http://images.newstar.net.cn/sally-imgsimage-20231204221556358.png)
+​      ![image-20231204221556358](http://images.newstar.net.cn/sally-imgsimage-20231204221556358.png) 
 
 \- 举例说明：
 
@@ -278,23 +278,17 @@ console.log(Date.now())
   * 所有的标签 比如 body、 div标签
   * html 是根节点
 
-  
-
   2. 属性节点
 
   * 所有的属性 比如 href、 class属性
-
-  
 
   3. 文本节点
 
   * 所有的文本 比如标签里面的文字
 
-  
-
   4. 其他
 
-![image-20231205134914057](http://images.newstar.net.cn/sally-imgsimage-20231205134914057.png)
+![image-20231205134914057](http://images.newstar.net.cn/sally-imgsimage-20231205134914057.png) 
 
 
 
@@ -674,7 +668,7 @@ ul.insertBefore(li, ul.children[0]) // ul.children[0]节点前插入，在老大
    * 触屏事件可响应用户手指（或触控笔)对屏幕或者触控板操作
 3. 常见的触屏事件如下：
 
-![image-20231206141217054](http://images.newstar.net.cn/sally-imgsimage-20231206141217054.png)
+![image-20231206141217054](http://images.newstar.net.cn/sally-imgsimage-20231206141217054.png) 
 
 
 
@@ -723,7 +717,7 @@ ul.insertBefore(li, ul.children[0]) // ul.children[0]节点前插入，在老大
 
   6. Display: 展示在页面上
 
-![image-20231207094327988](http://images.newstar.net.cn/sally-imgsimage-20231207094327988.png)
+![image-20231207094327988](http://images.newstar.net.cn/sally-imgsimage-20231207094327988.png) 
 
   
 
@@ -741,7 +735,7 @@ ul.insertBefore(li, ul.children[0]) // ul.children[0]节点前插入，在老大
 
 * 思考下述代码的重绘重排过程：
 
-![image-20231207094910703](http://images.newstar.net.cn/sally-imgsimage-20231207094910703.png)
+![image-20231207094910703](http://images.newstar.net.cn/sally-imgsimage-20231207094910703.png) 
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // document.querySelector()
+
+    // dom在Window里面，只不过Window已经是最大，所以document其实省略了window。就如中国上海人，省略中国
+    // window.document.querySelector()
+    console.log(document === window.document) // true
+
+    // 声明的函数或全局变量默认挂在Window身上，调用时是 window.fn() 
+    function fn() {
+      console.log(11)
+    }
+    // 结果还是11
+    window.fn()
+
+    // 以前var全局声明的变量也挂在Window身上，const和let是挂在自己的作用域内
+    var num = 10
+    console.log(window.num)
+  </script>
+</body>
+
+</html>
