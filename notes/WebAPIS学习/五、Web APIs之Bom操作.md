@@ -1,4 +1,8 @@
-Bom操作
+# Bom操作
+
+[toc]
+
+
 
 ## Window对象
 
@@ -549,7 +553,7 @@ forward.addEventListener('click', function () {
 
   
 
-### sessionStorage（了解）
+#### sessionStorage（了解）
 
 * 特性：
 
