@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(/^java$/.test('java')) // true
+    console.log(/^java$/.test('JAVA')) // false
+
+    // 加修饰符i 不区分大小写
+    console.log(/^java$/i.test('JAVA')) // true
+    console.log(/^java$/i.test('Java')) // true
+
+
+    // 加修饰符g全局 替换
+    const str = 'java是一门编程语言， 学完JAVA工资很高'
+    // const re = str.replace(/java|JAVA/g, '前端') // 只写g替换的是小写的，要用| 或者后面跟ig
+    const re = str.replace(/java/ig, '前端')
+    console.log(re)  // 前端是一门编程语言， 学完前端工资很高
+  </script>
+</body>
+
+</html>

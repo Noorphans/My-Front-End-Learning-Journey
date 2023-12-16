@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 字符类   [abc]  只选1个
+    console.log(/^[abc]$/.test('a'))  // true
+    console.log(/^[abc]$/.test('b'))  // true
+    console.log(/^[abc]$/.test('c'))  // true
+    console.log(/^[abc]$/.test('ab'))  // false //有精确匹配
+    console.log(/^[abc]{2}$/.test('ab'))  // true  加量词，重复两次
+    console.log('------------------')
+    // 字符类简化写法  [a-z]  只选1个
+    console.log(/^[A-Z]$/.test('p'))  // false
+    console.log(/^[A-Z]$/.test('P'))  // true
+    console.log(/^[0-9]$/.test(2))  // true
+    console.log(/^[a-zA-Z0-9]$/.test(2))  // true
+    console.log(/^[a-zA-Z0-9]$/.test('p'))  // true  
+    console.log(/^[a-zA-Z0-9]$/.test('P'))  // true
+    console.log('------------------')
+
+
+    // 3. [^a-z] 取反符
+    const reg5 = /^[^a-z]$/
+    console.log(reg5.test('a'))  // false 
+    console.log(reg5.test('A'))  // true
+    console.log(reg5.test(8))  // true
+  </script>
+</body>
+
+</html>

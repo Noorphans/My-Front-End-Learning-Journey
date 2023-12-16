@@ -16,6 +16,8 @@
 
 * 变量声明有三个： var 、let、 const
 
+
+
 1. `声明变量优先const`
 
    * 常量也是变量，只不过使用**const**声明被称为“常量”
@@ -315,9 +317,9 @@ arr[2] = 3
 
 3. **document最大对象**
 
-* 是DOM里提供的一个**对象**
+* 是DOM里提供的一个`对象`	
 
-* 它提供的属性和方法都是**用来访问和操作网页内容的**
+* 它提供的属性和方法都是`用来访问和操作网页内容的`
 
   \- 例如：document.write()
 
@@ -863,7 +865,7 @@ a.href = 'https://onestar.love/'
 
 1. 为了**解决className**容易**覆盖**以前的**类名**，我们可以通过**classList方式追加和删除类名**
 2. 修改大量样式更方便且`classList追加和删除不影响以前的类名`
-3. 三个方法：add() remove() toggle()
+3. 三个方法：add() remove() toggle() contains('类名')
 
 * 语法：
 
@@ -874,6 +876,8 @@ a.href = 'https://onestar.love/'
   元素.classList.remove('类名')
   // 切换一个类
   元素.classList.toggle('类名')
+ // 看看有没有包含某个类，如果有则返回true，没有则返回false
+  元素.classList.contains('类名') 
 ```
 
 
@@ -923,8 +927,11 @@ a.href = 'https://onestar.love/'
   > 1. 追加类 add()类名不加点，并且是字符串
   > 2. 删除类 remove()类名不加点，并且是字符串
   > 3. 切换类 toggle(),查看有无类名，有就删掉，没有就加上
-  > 4. 三个方法，注意加()
-  > 5. 三者都不影响以前的类名
+  > 4. 检测类 contains()`看看有没有包含某个类，如果有则返回true，没有则返回false`
+  > 5. 三个方法，注意加()
+  > 6. 三者都不影响以前的类名
+
+
 
 
 

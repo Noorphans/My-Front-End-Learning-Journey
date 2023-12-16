@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //  量词 * 类似 >=0 次 即0 次或多次
+
+    // console.log(/^哈$/.test('哈')) // true
+    // console.log(/^哈*$/.test('')) // true
+    // console.log(/^哈*$/.test('哈')) // true
+    // console.log(/^哈*$/.test('哈哈')) // true
+    // console.log(/^哈*$/.test('二哈很傻')) //  false
+    // console.log(/^哈*$/.test('哈很傻')) //  false
+    // console.log(/^哈*$/.test('哈很哈')) // false  精准匹配 只能有哈，以哈开头和结尾
+
+    // console.log('------------------')
+
+    //  量词 + 类似 >=1 次
+
+    // console.log(/^哈$/.test('哈')) // true
+    // console.log(/^哈+$/.test('')) // false 未以哈开头结尾，且没有>=1
+    // console.log(/^哈+$/.test('哈')) // true
+    // console.log(/^哈+$/.test('哈哈')) // true
+    // console.log(/^哈+$/.test('二哈很傻')) //  false
+    // console.log(/^哈+$/.test('哈很傻')) //  false
+    // console.log(/^哈+$/.test('哈很哈')) // false
+
+    // console.log('------------------')
+    // console.log('------------------')
+
+    //  量词 ? 类似  0 || 1
+
+    // console.log(/^哈?$/.test('')) // true
+    // console.log(/^哈?$/.test('哈')) // true
+    // console.log(/^哈?$/.test('哈哈')) // false
+    // console.log(/^哈?$/.test('二哈很傻')) //  false
+    // console.log(/^哈?$/.test('哈很傻')) //  false
+    // console.log(/^哈?$/.test('哈很哈')) // false
+
+    // // 量词 {n} 写几，就必须出现几次
+    // console.log(/^哈{4}$/.test('哈'))
+    // console.log(/^哈{4}$/.test('哈哈'))
+    // console.log(/^哈{4}$/.test('哈哈哈'))
+    // console.log(/^哈{4}$/.test('哈哈哈哈')) // true
+    // console.log(/^哈{4}$/.test('哈哈哈哈哈'))
+    // console.log(/^哈{4}$/.test('哈哈哈哈哈哈'))
+    // console.log('------------------')
+
+    // // 量词 {n,}   >=n
+    // console.log(/^哈{4,}$/.test('哈'))
+    // console.log(/^哈{4,}$/.test('哈哈'))
+    // console.log(/^哈{4,}$/.test('哈哈哈'))
+    // console.log(/^哈{4,}$/.test('哈哈哈哈')) // true
+    // console.log(/^哈{4,}$/.test('哈哈哈哈哈')) // true
+    // console.log(/^哈{4,}$/.test('哈哈哈哈哈哈')) // true
+    // console.log('------------------')
+
+    // 量词 {m,n}  逗号左右两侧千万不能有空格    ≤ m &&  >= n次 大于等于4或小于等于6
+    console.log(/^哈{4,6}$/.test('哈'))
+    console.log(/^哈{4,6}$/.test('哈哈'))
+    console.log(/^哈{4,6}$/.test('哈哈哈'))
+    console.log(/^哈{4,6}$/.test('哈哈哈哈')) // true
+    console.log(/^哈{4,6}$/.test('哈哈哈哈哈')) // true
+    console.log(/^哈{4,6}$/.test('哈哈哈哈哈哈')) // true
+    console.log(/^哈{4,6}$/.test('哈哈哈哈哈哈哈'))
+    console.log('------------------')
+  </script>
+</body>
+
+</html>

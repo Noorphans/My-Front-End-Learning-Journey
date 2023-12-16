@@ -487,7 +487,38 @@ btn.addEventListener('click', function () {
   </script>
   ```
 
-  
+
+
+
+#### 补充-实时监听change事件
+
+1. `Change事件`用于监听特定元素的内容或属性变化。当特定元素的值（value）被改变时，Change 事件将被触发即`内容发生了变化就会触发`。
+2. 这个事件通常在表单元素上使用，例如，Select、input 和 textarea。
+
+
+
+\- 举例说明：
+
+给input注册 change 事件，值被修改并且失去焦点后触发
+
+```javascript
+<input type="text">
+<script>
+// change 事件是 内容发生了变化就会触发
+const input = document.querySelector('input')
+input.addEventListener('change', function () {
+  console.log(111)
+})
+</script>
+```
+
+​                                   ![image-20231215155720424](http://images.newstar.net.cn/sally-imgsimage-20231215155720424.png) 
+
+
+
+
+
+
 
 
 
