@@ -715,10 +715,10 @@
         // layer.style.left = x + 'px'
         // layer.style.top = y + 'px'// 因为move移动一像素就会得到一个新的xy，把新xy拼上'px'给left&top值，盒子就会动
 
-        // 6.5 黑色遮罩移动 在 middle 盒子内 限定移动的距离
+        // 6.5 黑色遮罩移动 在 middle 盒子内 限定移动的距离 （中等盒子是400的矩形盒子）
         if (x >= 0 && x <= 400 && y >= 0 && y <= 400) {
-          // 黑色盒子不是一直移动的
-          // 声明2个变量 黑色盒子移动的 mx my变量 
+          // 6.7 黑色盒子不是一直移动的，是200的矩形盒子
+          // 声明2个变量 黑色盒子移动的 mx my变量（m=move） ，鼠标在黑色盒子移动到一半时才动即x小于100大于300都不动，只移动200的距离
           let mx = 0, my = 0
           if (x < 100) mx = 0
           if (x >= 100 && x <= 300) mx = x - 100
@@ -729,9 +729,10 @@
           if (y >= 100 && y <= 300) my = y - 100
           if (y > 300) my = 200
 
+          // 6.6 黑色遮罩移动赋值
           layer.style.left = mx + 'px'
           layer.style.top = my + 'px'
-          // 6.6 大盒子的背景图片要跟随 中等盒子移动  存在的关系是 2倍 ，往右移动 图往左走改为负数
+          // 6.8 大盒子的背景图片要跟随 中等盒子移动  存在的关系是 2倍 ，往右移动 图往左走改为负数
           large.style.backgroundPositionX = -2 * mx + 'px'
           large.style.backgroundPositionY = -2 * my + 'px'
         }
